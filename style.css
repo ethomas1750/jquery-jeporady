@@ -15,6 +15,14 @@ grid{
     height: 100px
 }
 
+.category{
+  font-size: 20px;
+   color: black;
+   background-color: black;
+   border: solid black 1px;
+   padding: 10px;
+}
+
 .content{
     text-align: center;
     font-size: 25px;

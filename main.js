@@ -1,2 +1,2 @@
-console.log(functiona
+console.log(function)
 

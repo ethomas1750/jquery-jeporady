@@ -1,54 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jeopardy Game</title>
-        <link href="./emoji.png" rel="shortcut icon" type="image/jpg"/>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"</script>
-  <script src="./main.js" defer/>
-    </head>
-    <body>
-<h1>Jeopardy</h1>
-      <div id="score"></div>
-       <div class="gird">
-      <div class="category">Category 1</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeopardy Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="jeopardy-board">
+        <div class="category">Category 1</div>
         <div class="category">Category 2</div>
         <div class="category">Category 3</div>
         <div class="category">Category 4</div>
         <div class="category">Category 5</div>
-      
-           <div class="tile-item">$100</div>
-         <div class="tile-item">$100</div>
-          <div class="tile-item">$100</div>
-        <div class="tile-item">$100</div>
-        <div class="tile-item">$100</div>
-        <div class="tile-item">$200</div>
-        <div class="tile-item">$200</div>
-        <div class="tile-item">$200</div>
-        <div class="tile-item">$200</div>
-        <div class="tile-item">$200</div>
-        <div class="tile-item">$200</div>
-        <div class="tile-item">$300</div>
-        <div class="tile-item">$300</div>
-        <div class="tile-item">$300</div>
-        <div class="tile-item">$300</div>
-        <div class="tile-item">$300</div>
-        <div class="tile-item">$400</div>
-        <div class="tile-item">$400</div>
-       <div class="tile-item">$400</div>
-       <div class="tile-item">$400</div>
-       <div class="tile-item">$400</div>
-       <div class="tile-item">$500</div>
-       <div class="tile-item">$500</div>
-       <div class="tile-item">$500</div>
-       <div class="tile-item">$500</div>
-      <div class="tile-item">$500</div>
-      </div>
-       <div id="question"></div>
-        <label for="type">Your Answer</p>
-        <input name="type" type="text">
-        <button>SUBMIT</button>
+        <div class="category">Category 6</div>
+        
+        <!-- Question tiles -->
+        <div class="question" data-question="Question 1-100" data-answer="Answer 1-100">100</div>
+        <div class="question" data-question="Question 2-100" data-answer="Answer 2-100">100</div>
+        <div class="question" data-question="Question 3-100" data-answer="Answer 3-100">100</div>
+        <div class="question" data-question="Question 4-100" data-answer="Answer 4-100">100</div>
+        <div class="question" data-question="Question 5-100" data-answer="Answer 5-100">100</div>
+        <div class="question" data-question="Question 6-100" data-answer="Answer 6-100">100</div>
+        <!-- Add more question tiles as needed -->
     </div>
-      </body>
-      </html>
+
+    <!-- Modal for showing the question -->
+    <div id="question-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="question-text"></p>
+            <button id="show-answer">Show Answer</button>
+            <p id="answer-text" style="display:none;"></p>
+        </div>
+    </div>
